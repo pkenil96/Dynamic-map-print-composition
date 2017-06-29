@@ -1,0 +1,2 @@
+This project takes user's preferences like layer details,orientation,layouts and sends request to the Geoserver for required data.
+The data is received from the geoserver in the form of vector tiles and is displayed in the web app. After the data is received, i have used mapfish plugin to print the data!

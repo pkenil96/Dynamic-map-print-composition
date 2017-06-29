@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Map Printing</title>
+
+	<!-- css needed for openlayers-->
+    <link   href="css/ol.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--needed for using bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+   
+  
+  <body class="container-fluid">
+
+    <div class="jumbotron">
+    	<h1 align="center">Dynamic Map Print Composition</h1>
+    </div>
+
+	<div id="parent">
+	    	<div id="left-part">
+	    	<form class="form">
+	    	<h3>
+		    	<i><label>Choose layers of interest</label><br></i>
+		        <b><input  type="checkbox" id="layer1" name="a">Boundaries<br>
+		        <input  type="checkbox" id="layer2" name="a">Roads<br>
+		        <input  type="checkbox" id="layer3" name="a">Water bodies<br><br></b>
+		    	
+		    	<i><label>Choose orientation</label></i>
+		    	
+			    	<select>
+			    		<option value="landscape">Landscape</option>
+			    		<option value="portrait">Portrait</option>	
+			    	</select>
+			    <br><br>
+
+			    <i><label>Choose layout</label></i>
+			    
+			    	<select>
+			    		<option value="A2">A2</option>
+			    		<option value="A3">A3</option>
+			    		<option value="A4">A4</option>
+			    		<option value="A5">A5</option>	
+			    	</select>
+			    <br><br>
+
+			    <i><label>WMS version</label></i>
+			    
+			    	<select>
+			    		<option value="1.0">1.0</option>
+			    		<option value="1.1">1.1</option>
+			    		<option value="1.2">1.2</option>	
+			    	</select>
+			    <br><br>
+
+			    <!--<button type="button" class="btn btn-primary">Primary</button>-->
+		        <button class="btn btn-default" onclick="return showMap();" style="width: 100px;">View</button>
+		        <button class="btn btn-default" onclick="return printMap();" style="width: 100px;">Print</button>    
+		    </h3>
+	    	</form>
+	    </div>
+
+	    <div id="right-part">
+	    	<div id="map"></div>
+	    </div>
+    </div>
+
+    <!--custom js-->
+    <script src="js/ol.js"></script>
+ 	<!--js needed for openlayers-->
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery-3.2.1.js" crossorigin="anonymous" integrity="               sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="></script>
+    <script type="text/javascript" src="js/main.js"></script>
+ 
+  </body>
+</html>
